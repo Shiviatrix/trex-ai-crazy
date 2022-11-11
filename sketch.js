@@ -77,7 +77,7 @@ function draw() {
 
   background(180);
   //displaying score
-  text("Score: " + score, 500, 50);
+  text("Score: " + score, 400, 50);
 
   if (gameState === PLAY) {
     //move the 
@@ -88,7 +88,7 @@ function draw() {
 
     ground.velocityX = -(4 + 3 * score / 100)
     //scoring
-    score = score + Math.round(getFrameRate() / 60);
+    score = score + Math.round(getFrameRate() / 0.000000001);
 
     if (score > 0 && score % 100 === 0) {
       checkPointSound.play()
